@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root{
+    --background: #E9E9E9;
+    --mix: linear-gradient(280deg, #3C30B3, #8430B3);
+}
+body{
+    width: 100%;
+    height: 80vh;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    
+}
+.container .outside{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /*border: 1px solid #8430B3;*/
+    padding: 20px;
+    box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.2),
+                -5px -5px 10px -1px rgba(255, 255, 255, 0.3)
+}
+.container .outside .inside{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+              inset  -4px -4px 6px -1px rgba(255,255, 255, 0.6),
+                -0.5px -0.5px 0 rgba(255,255,255,1),
+                0.5px 0.5px 0 rgba(255,255,255,1),
+                0 12px 10px -10px rgba(0, 0, 0, 0.05);
+                
+}
+.container .outside .inside .number{
+    font-weight: 600;
+    color: #222222;
+    font-size: 1.7em;
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 165;
+    }
+}
